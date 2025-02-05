@@ -10,5 +10,8 @@ int main() {
     else if(age<18 && status=='0'){
         printf("Not Eligible");
     }
+    else{
+        printf("Invalid Input");
+    }
     return 0;
 }
