@@ -4,14 +4,11 @@ int main() {
     int status;
     scanf("%d", &age);
     scanf("%d", &status);
-    if(age >=18 && (status==1 || status==0)){
+    if(age >=18 && status==1){
         printf("Eligible");
     }
-    else if(age<18 && (status==0 || status==1)){
-        printf("Not Eligible");
-    }
     else{
-        printf("Invalid Input");
+        printf("Not Eligible");
     }
     return 0;
 }
