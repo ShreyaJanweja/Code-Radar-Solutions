@@ -5,7 +5,7 @@ int main() {
     char c;
     scanf("%d", &a);
     scanf("%d", &b);
-    scanf("%c", &c);
+    scanf(" %c", &c);
     switch(c){
         case '+' : printf("%d",a+b);
         break;
@@ -13,7 +13,11 @@ int main() {
         break;
         case '*' : printf("%d",a*b);
         break;
-        case '/' : printf("%d",a/b);
+        case '/' :
+        if (b != 0)  // Check for division by zero
+                printf("%d", a / b);
+            else
+                printf("Error: Division by zero!");
         break;
         default : printf("Invalid");
     } 
