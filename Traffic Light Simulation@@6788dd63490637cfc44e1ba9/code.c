@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main() {
     char light;
+    scanf("%c", &light);
     if(light == 'R'){
         printf("Stop");
     }
