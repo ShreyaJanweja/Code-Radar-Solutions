@@ -18,7 +18,6 @@ int main() {
     int N;
     
     // Asking the user for the number of rows
-    printf("Enter the number of rows: ");
     scanf("%d", &N);
     
     // Printing the inverted right-angled triangle
