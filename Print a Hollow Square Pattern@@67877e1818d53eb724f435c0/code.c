@@ -33,7 +33,7 @@ int main() {
                 printf("*");
             } else {
                 // Print space for the interior of the square
-                printf("  ");
+                printf(" ");
             }
         }
         // Move to the next line after each row
