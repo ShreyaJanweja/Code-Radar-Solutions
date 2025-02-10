@@ -22,7 +22,6 @@ int main() {
     int N;
     
     // Asking the user for the size of the square
-    printf("Enter the size of the square: ");
     scanf("%d", &N);
     
     // Loop to print each row
