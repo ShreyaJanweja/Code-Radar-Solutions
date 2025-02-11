@@ -15,10 +15,10 @@
 
 
 #include <stdio.h>
-#include <math.h>
 
 int main() {
-    int num, isPrime = 1; // Assume the number is prime initially
+    int num, i;
+    int isPrime = 1; // Assume the number is prime
 
     // Get input from the user
     scanf("%d", &num);
@@ -26,16 +26,11 @@ int main() {
     // Handle special cases
     if (num <= 1) {
         isPrime = 0;  // Numbers less than or equal to 1 are not prime
-    } else if (num == 2) {
-        // 2 is prime
-        isPrime = 1;
-    } else if (num % 2 == 0) {
-        isPrime = 0;  // All even numbers greater than 2 are not prime
     } else {
-        // Check divisibility from 3 to sqrt(num)
-        for (int i = 3; i <= sqrt(num); i += 2) {
+        // Check if the number is divisible by any number from 2 to num/2
+        for (i = 2; i <= num / 2; i++) {
             if (num % i == 0) {
-                isPrime = 0;  // Found a divisor, not a prime number
+                isPrime = 0; // Found a divisor, so it's not prime
                 break;
             }
         }
