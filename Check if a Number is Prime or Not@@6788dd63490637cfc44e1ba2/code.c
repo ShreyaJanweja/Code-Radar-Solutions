@@ -5,10 +5,10 @@ int main() {
     scanf("%d", &a);
     for(int i=1;i<=a;i++){
         if(i%1==0 && i%a==0){
-            printf("Prime");
+            printf("Prime\n");
         }
         else{
-            printf("Not Prime");
+            printf("Not Prime\n");
         }
     }
     return 0;
