@@ -8,7 +8,7 @@ int main(){
         ch = 'A';
         for(int j=N; j>=i;j--){
             printf("%c ",ch);
-            ch--;
+            ch++;
         }
         printf("\n");
     }
