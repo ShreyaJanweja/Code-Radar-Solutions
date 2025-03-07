@@ -3,14 +3,15 @@
 void prime();
 
 int main(){
-    int inputs , n;
-    scanf("%d", &inputs); 
+    // int inputs , n;
+    // scanf("%d", &inputs); 
     prime();
     return 0;
 }
 
 void prime(){
-    int n;
+    int inputs , n;
+    scanf("%d", &inputs);
     while(n != inputs){
         scanf("%d", &n);
     } 
