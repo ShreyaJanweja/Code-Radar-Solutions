@@ -17,7 +17,7 @@ void prime(){
     } 
     while(n >= 0){
         int result = (n % 1 == 0) && (n % n == 0);
-        printf(result);
+        printf("%d",result);
     }
 };
 
