@@ -1,15 +1,17 @@
 #include <stdio.h>
+
 int main() {
-    int num;
-    int bit;
+    int num, bit;
+    
+    // Taking input for the number and the bit position
     scanf("%d", &num);
     scanf("%d", &bit);
-    int nth_bit = (num >> bit) & 1;
-    if(nth_bit){
-        printf("%d",num);
-    }
-    else{
-        printf("0");
-    }
+
+    // Clear the nth bit using bitwise AND with NOT of (1 << bit)
+    num = num & ~(1 << bit);
+
+    // Print the modified number
+    printf(num);
+    
     return 0;
-}
+} 
