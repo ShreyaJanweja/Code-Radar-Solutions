@@ -7,8 +7,6 @@ int main() {
     // Input numbers
     scanf("%d %d", &x, &y);
 
-    printf("%d %d\n", x, y);
-
     // Swapping using XOR
     x = x ^ y;
     y = x ^ y;
