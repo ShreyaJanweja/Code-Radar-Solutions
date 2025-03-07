@@ -11,7 +11,7 @@ int main() {
     num = num & ~(1 << bit);
 
     // Print the modified number
-    printf(num);
+    printf("%d", bit);
     
     return 0;
 }
