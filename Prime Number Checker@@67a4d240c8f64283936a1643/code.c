@@ -10,6 +10,7 @@ int main(){
 }
 
 void prime(){
+    int n;
     while(n != inputs){
         scanf("%d", &n);
     } 
