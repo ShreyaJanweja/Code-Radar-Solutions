@@ -60,10 +60,10 @@ int main() {
     int arr[n];
 
     // Input array elements
-    printf("%d", n);
+    // printf("%d", n);
     for (int i = 0; i < n; i++) {  // Fixed loop syntax
         scanf("%d", &arr[i]);
-    }y
+    }
 
     // Call Bubble Sort function
     bubbleSort(arr, n);
