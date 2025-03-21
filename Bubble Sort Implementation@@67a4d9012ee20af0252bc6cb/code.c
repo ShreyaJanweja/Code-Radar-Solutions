@@ -44,7 +44,7 @@
 
 
 #include <stdio.h>
-#include <stdlib.h> // Needed for dynamic memory allocation
+// #include <stdlib.h> // Needed for dynamic memory allocation
 
 // Function to perform Bubble Sort
 void bubbleSort(int arr[], int n) {
