@@ -20,7 +20,7 @@ int main(){
         sum = sum + i;
     }
     printf("%d", sum);
-    return o;
+    return 0;
 }
 
 
