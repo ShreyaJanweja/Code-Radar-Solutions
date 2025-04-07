@@ -1,26 +1,32 @@
-// Your code here...
 #include <stdio.h>
+#include <string.h>
+
 int main() {
     char str[200];
     char toReplace, replaceWith;
-    int i = 0;
 
-    // Input string
+    // Read the string
     fgets(str, sizeof(str), stdin);
 
-    // Input character to be replaced
-    scanf(" %c", &toReplace);
+    // Remove newline character from fgets (if present)
+    int len = strlen(str);
+    if (str[len - 1] == '\n') {
+        str[len - 1] = '\0';
+    }
 
-    // Input replacement character
+    // Read the character to replace and the replacement character
+    scanf(" %c", &toReplace);
     scanf(" %c", &replaceWith);
 
-    // Replace characters in the string
-    while (str[i] != '\0') {
+    // Replace characters
+    for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] == toReplace) {
             str[i] = replaceWith;
         }
-        i++;
     }
+
+    // Output the modified string
     printf("%s\n", str);
+
     return 0;
 }
