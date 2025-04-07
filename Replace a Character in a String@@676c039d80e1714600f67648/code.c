@@ -1,6 +1,5 @@
 // Your code here...
 #include <stdio.h>
-
 int main() {
     char str[200];
     char toReplace, replaceWith;
@@ -22,8 +21,6 @@ int main() {
         }
         i++;
     }
-
     printf("%s\n", str);
-
     return 0;
 }
