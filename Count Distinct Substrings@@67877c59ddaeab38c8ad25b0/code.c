@@ -1,45 +1,49 @@
-// Your code here...
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
-int isDuplicate(char substrs[][200], char *substr, int count) {
-    for (int i = 0; i < count; i++) {
-        if (strcmp(substrs[i], substr) == 0)
-            return 1;
-    }
-    return 0;
+#define MAX 1000
+
+// To compare substrings during qsort
+int cmpfunc(const void *a, const void *b) {
+    return strcmp(*(const char **)a, *(const char **)b);
 }
 
 int main() {
-    char str[200];
-    char substrs[10000][200]; // Stores all unique substrings
-    int count = 0;
-
-    // Read input string
-    fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0';
+    char str[MAX];
+    scanf("%s", str);
 
     int len = strlen(str);
+    char *substrings[MAX * MAX];
+    int count = 0;
 
+    // Generate all substrings
     for (int i = 0; i < len; i++) {
         for (int j = 1; j <= len - i; j++) {
-            char temp[200];
+            char *temp = (char *)malloc(j + 1);
             strncpy(temp, str + i, j);
             temp[j] = '\0';
-
-            if (!isDuplicate(substrs, temp, count)) {
-                strcpy(substrs[count++], temp);
-            }
+            substrings[count++] = temp;
         }
     }
 
-    // Print distinct substrings
-    for (int i = 0; i < count; i++) {
-        printf("%s\n", substrs[i]);
+    // Sort all substrings
+    qsort(substrings, count, sizeof(char *), cmpfunc);
+
+    // Count distinct substrings
+    int uniqueCount = 1;  // First one is always unique
+    for (int i = 1; i < count; i++) {
+        if (strcmp(substrings[i], substrings[i - 1]) != 0) {
+            uniqueCount++;
+        }
     }
 
-    // Print total count
-    printf("%d\n", count);
+    printf("%d\n", uniqueCount);
+
+    // Free memory
+    for (int i = 0; i < count; i++) {
+        free(substrings[i]);
+    }
 
     return 0;
 }
