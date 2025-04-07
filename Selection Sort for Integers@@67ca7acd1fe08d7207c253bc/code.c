@@ -22,5 +22,5 @@ void printArray(int arr[], int n) {
         if (i != n - 1)
             printf(" ");
     }
-    printf("\n");
+   
 }
