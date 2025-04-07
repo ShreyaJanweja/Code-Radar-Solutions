@@ -1,30 +1,29 @@
-// Your code here...
 #include <stdio.h>
 
 int main() {
-    int i, j, space, rows;
-
-    // printf("Enter the number of rows: ");
+    int rows, i, j, space;
     scanf("%d", &rows);
 
     for(i = 1; i <= rows; i++) {
         // Print leading spaces
         for(space = 1; space <= rows - i; space++) {
-            printf("  "); // two spaces for alignment
+            printf(" ");
         }
 
-        // Ascending numbers
+        // Print ascending numbers
         for(j = 1; j <= i; j++) {
             printf("%d", j);
         }
 
-        // Descending numbers
+        // Print descending numbers
         for(j = i - 1; j >= 1; j--) {
             printf("%d", j);
         }
 
+        // Move to the next line
         printf("\n");
     }
 
     return 0;
 }
+
