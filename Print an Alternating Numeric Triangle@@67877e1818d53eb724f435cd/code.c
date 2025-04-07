@@ -1,28 +1,19 @@
-// Your code here...
 #include <stdio.h>
 
 int main() {
-    int rows, i, j, num = 1;
+    int rows, i, j, val;
     scanf("%d", &rows);
 
     for(i = 1; i <= rows; i++) {
-        int start = num;
+        // Decide starting value for the row
+        if(i % 2 == 0)
+            val = 0;
+        else
+            val = 1;
 
-        // Calculate numbers for this row
         for(j = 1; j <= i; j++) {
-            num++;
-        }
-
-        if(i % 2 == 0) {
-            // Even row: print in reverse
-            for(j = num - 1; j >= start; j--) {
-                printf("%d ", j);
-            }
-        } else {
-            // Odd row: print normally
-            for(j = start; j < num; j++) {
-                printf("%d ", j);
-            }
+            printf("%d ", val);
+            val = 1 - val; // Toggle between 1 and 0
         }
 
         printf("\n");
@@ -30,3 +21,4 @@ int main() {
 
     return 0;
 }
+
