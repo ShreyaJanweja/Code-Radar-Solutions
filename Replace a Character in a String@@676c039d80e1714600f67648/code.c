@@ -9,10 +9,10 @@ int main() {
     fgets(str, sizeof(str), stdin);
 
     // Input character to be replaced
-    scanf("%c", &toReplace);
+    scanf(" %c", &toReplace);
 
     // Input replacement character
-    scanf("%c", &replaceWith);
+    scanf(" %c", &replaceWith);
 
     // Replace characters in the string
     while (str[i] != '\0') {
