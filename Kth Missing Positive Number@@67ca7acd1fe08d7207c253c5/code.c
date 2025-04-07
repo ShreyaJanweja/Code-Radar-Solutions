@@ -3,7 +3,7 @@ int findKthMissing(int arr[], int n, int k) {
     int current = 1;
     int i = 0;
 
-    while (true) {
+    while (1) {
         if (i < n && arr[i] == current) {
             i++;
         } else {
