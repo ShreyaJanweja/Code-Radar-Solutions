@@ -17,7 +17,7 @@ int main() {
 
     float average = sum / 7;
 
-    printf("Average Temprature: %.2f\n", average);
+    printf("Average Temperature: %.2f\n", average);
 
     return 0;
 }
