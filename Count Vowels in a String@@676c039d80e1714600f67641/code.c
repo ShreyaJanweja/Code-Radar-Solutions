@@ -35,9 +35,10 @@ int main(){
     char str[100];
     scanf("%s", &str);
     int len = strlen(str);
+    int count = 0;
     for(int i=0; i = len -1; i++){
-        char ch = tolower(str[i]);
-        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+        // char ch = tolower(str[i]);
+        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch =='I' || ch == 'O' || ch == 'U'){
             count++;
         }
     }
