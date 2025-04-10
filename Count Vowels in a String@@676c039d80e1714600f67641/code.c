@@ -7,7 +7,7 @@ int main(){
     int count = 0;
     // char ch;
     for(int i=0; i < len; i++){
-        char ch;
+        char ch = str[i];
         if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch =='I' || ch == 'O' || ch == 'U'){
             count++;
         }
