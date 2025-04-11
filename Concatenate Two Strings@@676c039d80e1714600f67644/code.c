@@ -37,9 +37,9 @@
 
 #include<string.h>
 int main(){
-    char str1[];
+    char str1[200];
     fgets(str1, sizeof(str1), stdin);
-    char str2[];
+    char str2[200];
     fgets(str2, sizeof(str2), stdin);
     char new[] = strcat(str1, str2);
     puts(new);
