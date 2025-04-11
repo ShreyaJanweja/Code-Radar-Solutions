@@ -33,6 +33,6 @@ int main(){
         i++;
     }
     // int length = strlen(str);
-    printf("%d", length);
+    printf("%d", count);
     return 0;
 }
