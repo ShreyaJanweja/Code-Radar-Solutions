@@ -41,6 +41,9 @@ int main(){
     fgets(str1, sizeof(str1), stdin);
     char str2[200];
     fgets(str2, sizeof(str2), stdin);
+     // Remove trailing newline if present
+    str1[strcspn(str1, "\n")] = '\0';
+    str2[strcspn(str2, "\n")] = '\0';
     char new[200] = strcat(str1, str2);
     puts(new);
     return 0;
