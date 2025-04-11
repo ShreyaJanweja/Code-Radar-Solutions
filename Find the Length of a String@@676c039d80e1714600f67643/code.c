@@ -26,8 +26,13 @@ int main(){
     fgets(str , sizeof(str) , stdin);
     int i =0;
     int count = 0;
-    // while(str[i] !)
-    int length = strlen(str);
+    while(str[i] != '\0'){
+        if(str[i] != '\n'){
+            count++
+        }
+        i++;
+    }
+    // int length = strlen(str);
     printf("%d", length);
     return 0;
 }
