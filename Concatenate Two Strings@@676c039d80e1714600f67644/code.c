@@ -41,7 +41,7 @@ int main(){
     fgets(str1, sizeof(str1), stdin);
     char str2[200];
     fgets(str2, sizeof(str2), stdin);
-    char new[] = strcat(str1, str2);
+    char new[200] = strcat(str1, str2);
     puts(new);
     return 0;
 }
