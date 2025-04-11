@@ -23,7 +23,7 @@
 #include<string.h>
 int main(){
     char str[200];
-    fgets(str , 200 , stdin);
+    fgets(str , sizeof(str) , stdin);
     int i =0;
     int count = 0;
     // while(str[i] !)
