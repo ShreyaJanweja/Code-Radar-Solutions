@@ -28,7 +28,7 @@ int main(){
     int count = 0;
     while(str[i] != '\0'){
         if(str[i] != '\n'){
-            count++
+            count++;
         }
         i++;
     }
